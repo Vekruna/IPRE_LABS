@@ -15,7 +15,7 @@ int main()
 		return 0;
 	}
 	
-	for(int i=2; sqrt(i*i); i++){
+	for(int i=2; pow(i,2) <= num; i++){
 		if(num % i == 0) {
 			printf("Neproste \n");
 			return 0;
