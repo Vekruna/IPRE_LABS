@@ -18,7 +18,7 @@ int main()
 	printf("Введіть запас діаметру: ");
 	scanf("%f", &zapas_diametru);
 
-	float result = sqrt(shirina*shirina + visota*visota);
+	float result = sqrt(pow(shirina, 2) + visota*visota);
 	float nareshti = result*(1+zapas_diametru / 100);
 	
 	printf("Діаметри: %f", result, "\n");
