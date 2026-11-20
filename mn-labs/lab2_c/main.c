@@ -10,11 +10,6 @@ int main()
 	printf("Введіть Ваше число: ");
 	scanf("%d", &num);
 	
-	if (num < 2) {
-		printf("Ne proste \n");
-		return 0;
-	}
-	
 	for(int i=2; pow(i,2) <= num; i++){
 		if(num % i == 0) {
 			printf("Neproste \n");
