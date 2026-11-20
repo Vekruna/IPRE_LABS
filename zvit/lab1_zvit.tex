@@ -1,0 +1,106 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\usepackage[ukrainian]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{%
+\IfFontExistsTF{Liberation Sans}{\setmainfont{Liberation Sans}}{%
+\setmainfont{Latin Modern Sans}}}
+
+\newcommand{\university}{Національний університет\\«Львівська політехніка»}
+\newcommand{\department}{Кафедра напівпровідникової електроніки (НПЕ)}
+\newcommand{\labnum}{1}
+\newcommand{\course}{Інженерне програмування (Частина 1)}
+\newcommand{\worktitle}{Введення виведення даних. Прості типи даних. Прості математичні операції.}
+\newcommand{\studentgroup}{МН-11}
+\newcommand{\studentname}{Куку Вадим}
+\newcommand{\teacherpost}{Асистент кафедри НПЕ}
+\newcommand{\teachername}{Шуригін Федір}
+\newcommand{\city}{Львів}
+\newcommand{\yearr}{2026}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries\MakeUppercase{\university}}
+
+    \vspace{0.4cm}
+    {\large\department}
+
+    \vspace{1.2cm}
+    \includegraphics[width=0.38\textwidth]{Nulp_logo_ukr.png}
+\end{center}
+
+\vspace{1.8cm}
+
+\begin{center}
+    \large
+    Лабораторна робота №1 \labnum
+
+    \vspace{0.3cm}
+    З курсу «\course»
+\end{center}
+
+\vspace{0.1cm}
+{\large \worktitle}
+
+\vspace{1.5cm}
+
+\begin{flushright}
+    \small
+    Виконав:\\
+    Студент групи \studentgroup\\
+    \\ {\studentname}
+
+    \vspace{0.5cm}
+    Прийняв:\\
+    \teacherpost\\
+    \teachername
+\end{flushright}
+
+\vfill
+
+\begin{center}
+    \small \city\ \yearr\ рр.
+\end{center}
+
+\newpage
+\begin{lstlisting}
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float shirina, visota, zapas-diametru;
+
+    printf("Доброго дня. Програма допоможе порахувати розмір отвору, "
+           "який необхідний для вільного проходження в ньому "
+           "прямокутної деталі.\n");
+
+    printf("Введіть ширину: ");
+    scanf("%f", &shirina);
+
+    printf("Введіть висоту: ");
+    scanf("%f", &visota);
+
+    printf("Введіть запас діаметру: ");
+    scanf("%f", &zapas_diametru);
+
+    float result = sqrt(pow(shirina, 2) + visota * visota);
+    float nareshti = result * (1 + zapas-diametru / 100);
+
+    printf("Діаметри: %f\n", result);
+    printf("Надлишок: %f\n", nareshti);
+
+    return 0;
+}
+
+\end{lstlisting}
+
+\textbf{Висновок:} При написанні коду використовував модуль \texttt{<math.h>}.
+\end{document}

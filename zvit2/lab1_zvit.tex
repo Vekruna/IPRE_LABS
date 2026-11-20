@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\usepackage[ukrainian]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{%
+\IfFontExistsTF{Liberation Sans}{\setmainfont{Liberation Sans}}{%
+\setmainfont{Latin Modern Sans}}}
+
+\newcommand{\university}{Національний університет\\«Львівська політехніка»}
+\newcommand{\department}{Кафедра напівпровідникової електроніки (НПЕ)}
+\newcommand{\labnum}{2}
+\newcommand{\course}{Інженерне програмування (Частина 1)}
+\newcommand{\worktitle}{Введення виведення даних. Прості типи даних. Прості математичні операції.}
+\newcommand{\studentgroup}{МН-11}
+\newcommand{\studentname}{Куку Вадим}
+\newcommand{\teacherpost}{Асистент кафедри НПЕ}
+\newcommand{\teachername}{Шуригін Федір}
+\newcommand{\city}{Львів}
+\newcommand{\yearr}{2026}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries\MakeUppercase{\university}}
+
+    \vspace{0.4cm}
+    {\large\department}
+
+    \vspace{1.2cm}
+    \includegraphics[width=0.38\textwidth]{Nulp_logo_ukr.png}
+\end{center}
+
+\vspace{1.8cm}
+
+\begin{center}
+    \large
+    Лабораторна робота № \labnum
+
+    \vspace{0.3cm}
+    З курсу «\course»
+\end{center}
+
+\vspace{0.1cm}
+{\large \worktitle}
+
+\vspace{1.5cm}
+
+\begin{flushright}
+    \small
+    Виконав:\\
+    Студент групи \studentgroup\\
+    \\ {\studentname}
+
+    \vspace{0.5cm}
+    Прийняв:\\
+    \teacherpost\\
+    \teachername
+\end{flushright}
+
+\vfill
+
+\begin{center}
+    \small \city\ \yearr\ рр.
+\end{center}
+
+\newpage
+\begin{lstlisting}
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+        int num;
+
+        printf("Доброго дня. \n Програма перевіряє всі натуральні числа в діапазоні від 1 до введеного Вами числа і визначає чи є вони простими, чи ні \n");
+
+        printf("Введіть Ваше число: ");
+        scanf("%d", &num);
+
+        if (num < 2) {
+                printf("Ne proste \n");
+                return 0;
+        }
+
+        for(int i=2; pow(i,2) <= num; i++){
+                if(num % i == 0) {
+                        printf("Neproste \n");
+                        return 0;
+                }
+        }
+
+        printf("Proste \n");
+
+        return 0;
+}
+
+\end{lstlisting}
+
+\textbf{Висновок:} При написанні коду використовував модуль \texttt{<math.h>}.
+\end{document}
